@@ -14,13 +14,12 @@ exports.exifFromFile = function(path) {
             var headSize = 65536;
             var buffer = new Buffer(headSize);
             fs.read(fd, buffer, 0, buffer.length, null, function (err, bytesRead, buffer) {
+                fs.close(fd);
                 if (err) return reject(err);
-                
+
                 var parser = exifParser.create(buffer);
                 var result = parser.parse();
                 resolve(result);
-                
-                fs.close(fd);
             });
         });
     });
