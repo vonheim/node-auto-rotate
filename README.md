@@ -16,7 +16,7 @@ var rotator = require('auto-rotate');
 
 rotator.autoRotateFile('rotated.jpg', 'fixed.jpg')
 .then(function(rotated) {
-    console.log(rotated ? 'Image rotated' : 'No rotation needed');
+    console.log(rotated ? 'Image rotated' : 'No rotation was needed');
 }).catch(function(err) {
     console.error('Got error: '+err);
 });
