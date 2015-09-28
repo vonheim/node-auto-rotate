@@ -55,13 +55,12 @@ exports.autoRotateFile = function(source, destination) {
 function rotate(currentOrientation, image) {
 	switch( currentOrientation ) {
 	    case 1: return; // top-left  - no transform
-	    case 2: return image.flip(); //	top-right - flip horizontal
+	    case 2: return image.flip('x'); //	top-right - flip horizontal
 	    case 3: return image.rotate(180); // bottom-right - rotate 180
-	    case 4: return image.rotate(180); // bottom-left - should flip vertically, but LWIP does not support it:(
-                                          // Resort to just rotating. Better than upside down.
-	    case 5: return image.rotate(90).flip(); // left-top - rotate 90 and flip horizontal
+	    case 4: return image.flip('y'); // bottom-left - flip vertically
+	    case 5: return image.rotate(90).flip('x'); // left-top - rotate 90 and flip horizontal
 	    case 6: return image.rotate(90); //	right-top - rotate 90
-	    case 7: return image.rotate(270).flip(); // right-bottom - rotate 270 and flip horizontal
+	    case 7: return image.rotate(270).flip('x'); // right-bottom - rotate 270 and flip horizontal
 	    case 8: return image.rotate(270); // left-bottom - rotate 270
     };
 }
