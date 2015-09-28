@@ -1,6 +1,6 @@
 {
   "name": "auto-rotate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Auto rotate JPEG images based on their EXIF Orientation tag. Promise based API.",
   "main": "index.js",
   "scripts": {
