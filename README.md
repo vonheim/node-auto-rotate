@@ -15,9 +15,9 @@ $ npm install auto-rotate
 var rotator = require('auto-rotate');
 
 rotator.autoRotateFile('rotated.jpg', 'fixed.jpg')
-.then(function() {
-    console.log("File rotated ok");
+.then(function(rotated) {
+    console.log(rotated ? 'Image rotated' : 'No rotation needed');
 }).catch(function(err) {
-    console.error("Got error: "+err);
+    console.error('Got error: '+err);
 });
 ```
