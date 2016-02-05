@@ -45,7 +45,7 @@ exports.autoRotateFile = function(source, destination) {
                         if( err ) return reject(err);
                         resolve();
                     });
-                }
+                } else {resolve(); }
             });
         });
     });
