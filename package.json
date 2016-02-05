@@ -1,6 +1,6 @@
 {
   "name": "auto-rotate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Auto rotate JPEG images based on their EXIF Orientation tag. Promise based API.",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
     "bluebird": "^2.9.34",
     "exif-parser": "^0.1.9",
     "fs-extra": "^0.24.0",
-    "lwip": "0.0.7"
+    "lwip": "0.0.8"
   }
 }
