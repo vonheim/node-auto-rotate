@@ -18,9 +18,13 @@ exports.exifFromFile = function(path) {
                 fs.close(fd);
                 if (err) return reject(err);
 
-                var parser = exifParser.create(buffer);
-                var result = parser.parse();
-                resolve(result);
+                try {
+                    var parser = exifParser.create(buffer);
+                    var result = parser.parse();
+                    resolve(result);
+                } catch(exifError) {
+                    reject(exifError);
+                }
             });
         });
     });
