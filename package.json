@@ -1,10 +1,16 @@
 {
   "name": "auto-rotate",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Auto rotate JPEG images based on their EXIF Orientation tag. Promise based API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "exif-parser": "0.1.12",
+    "fs-extra": "^5.0.0",
+    "jimp": "0.2.28"
   },
   "repository": {
     "type": "git",
@@ -14,6 +20,7 @@
     "autorotate",
     "rotate",
     "exif",
+    "jpg",
     "jpeg",
     "promise"
   ],
@@ -22,11 +29,5 @@
   "bugs": {
     "url": "https://github.com/vonheim/auto-rotate/issues"
   },
-  "homepage": "https://github.com/vonheim/auto-rotate",
-  "dependencies": {
-    "bluebird": "^2.9.34",
-    "exif-parser": "^0.1.9",
-    "fs-extra": "^0.24.0",
-    "lwip": "0.0.9"
-  }
+  "homepage": "https://github.com/vonheim/auto-rotate"
 }
